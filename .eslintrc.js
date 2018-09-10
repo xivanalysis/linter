@@ -1,6 +1,6 @@
 module.exports = {
 	extends: [
-		'plugin:xivanalysis/recommended'
+		'plugin:self/recommended'
 	],
 	env: {
 		node: true
