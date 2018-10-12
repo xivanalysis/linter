@@ -41,6 +41,30 @@ export default class Something extends Module {
 	}
 }
 		`,
+		`
+const notAClass = {
+	dependencies: [],
+	method () { this.notADep }
+}
+		`,
+		`
+import Module from 'parser/core/module'
+// silly example of nested classes but verifies that the scoping system works
+class A extends Module {
+	static dependencies = ['foo']
+	static B = class B extends Module {
+		static dependencies = ['bar']
+
+		method () {
+			this.bar
+		}
+	}
+
+	method () {
+		this.foo
+	}
+}
+		`,
 	],
 
 	invalid: [
