@@ -1,7 +1,6 @@
 {
-  "name": "eslint-plugin-xivanalysis",
+  "name": "@xivanalysis/eslint-plugin",
   "version": "0.0.1",
-  "private": true,
   "description": "Project-specific linting rules and configs for xivanalysis.",
   "keywords": [
     "eslint",
@@ -11,6 +10,9 @@
   "author": "ackwell",
   "license": "MIT",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "mocha tests --recursive"
   },
